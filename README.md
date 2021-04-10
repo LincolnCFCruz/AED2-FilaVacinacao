@@ -1,4 +1,4 @@
-# Trabalho-Fila de Vacinacao
+# Trabalho - Fila de Vacinacao
 
 ## Membros:
  - Lincoln Corrêa Figueiredo Cruz
