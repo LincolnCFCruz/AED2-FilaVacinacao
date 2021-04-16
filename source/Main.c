@@ -38,20 +38,20 @@ int main(void)
 	  case 0:
 	  {
 			printf("\n");
-			printf("+-----------------------------------+\n");
-			printf("|   Informações sobre o programa    |\n");
-			printf("+-----------------------------------+---------------------------------+\n");
-			printf("| O programa 'Vacinação contra COVID-19' tem o objetivo de desenvolver|\n");
-			printf("| nossas habilidades em torno do uso de ponteiros e arranjos, na dis- |\n");
-			printf("| ciplina de AEDII.                                                   |\n");
-			printf("+-----------------------------------+---------------------------------+\n");
-			printf("|            Autores                |                                 |\n");
-			printf("+-----------------------------------+---------------------------------+\n");
-			printf("| - Lincoln Corrêa Figueiredo Cruz                                    |\n");
-			printf("| - Pedro Igor Martins dos Reis                                       |\n");
-			printf("| - Rafaela Mesquita Gontijo                                          |\n");
-			printf("| - Rafael Brandão Nunes                                              |\n");
-			printf("+---------------------------------------------------------------------+\n");
+			printf("  +-----------------------------------+\n");
+			printf("  |   Informações sobre o programa    |\n");
+			printf("  +-----------------------------------+---------------------------------+\n");
+			printf("  | O programa 'Vacinação contra COVID-19' tem o objetivo de aprimorar  |\n");
+			printf("  | nossas habilidades em torno do uso de ponteiros e arranjos, na dis- |\n");
+			printf("  | ciplina de AEDII.                                                   |\n");
+			printf("  +-----------------------------------+---------------------------------+\n");
+			printf("  |            Autores                |              Github             |\n");
+			printf("  +-----------------------------------+---------------------------------+\n");
+			printf("  | - Lincoln Corrêa Figueiredo Cruz  |           LincolnCFCruz         |\n");
+			printf("  | - Pedro Igor Martins dos Reis     |              ORZAYAZ            |\n");
+			printf("  | - Rafaela Mesquita Gontijo        |           rafamesquita          |\n");
+			printf("  | - Rafael Brandão Nunes            |          RafaelBrandao13        |\n");
+			printf("  +---------------------------------------------------------------------+\n");
 			printf("\n"); 
 			break;
 	  }
@@ -60,9 +60,9 @@ int main(void)
       {
         Pessoa p;
         printf("\n");
-		printf("+---------------------------------------+\n");
-		printf("|   Cadastrar uma nova pessoa na fila   |\n");
-		printf("+---------------------------------------+\n");	
+		printf("  +---------------------------------------+\n");
+		printf("  |   Cadastrar uma nova pessoa na fila   |\n");
+		printf("  +---------------------------------------+\n");	
 		printf("\n");
 		printf("Nome: ");
 		scanf("%s", p.nome);  //Inserir nome.
@@ -79,9 +79,9 @@ int main(void)
       case 2: 
       {
 		printf("\n");
-		printf("+---------------------------+\n");
-		printf("|   Exibir a fila geral     |\n");
-		printf("+---------------------------+\n");	
+		printf("  +---------------------------+\n");
+		printf("  |   Exibir a fila geral     |\n");
+		printf("  +---------------------------+\n");	
 		printf("\n");
         ImprimirLista(&fila);
       } break;
@@ -92,14 +92,14 @@ int main(void)
         int fase;
         //Menu para as fases.
         printf("\n");
-		printf("+--------------------------------+\n");
-		printf("|   Exibir uma fila específica   |\n");
-		printf("+--------------------------------+\n");	
-		printf("| 1 → Primeira fase              |\n");
-		printf("| 2 → Segunda fase               |\n");
-		printf("| 3 → Terceira fase              |\n");
-		printf("| 4 → Quarta fase                |\n");
-		printf("+--------------------------------+\n");	
+		printf("  +--------------------------------+\n");
+		printf("  |   Exibir uma fila específica   |\n");
+		printf("  +--------------------------------+\n");	
+		printf("  | 1 → Primeira fase              |\n");
+		printf("  | 2 → Segunda fase               |\n");
+		printf("  | 3 → Terceira fase              |\n");
+		printf("  | 4 → Quarta fase                |\n");
+		printf("  +--------------------------------+\n");	
 		printf("\n");
         scanf("%d", &fase);
 
