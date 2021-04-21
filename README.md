@@ -57,5 +57,5 @@ make Main
 ./Main
 ```
 ## Exemplo de fila:
-![Output](https://raw.githubusercontent.com/ORZAYAZ/Trabalho-Fila-de-Vacinacao/main/Imagens/OutputFinal.png)
+![Output](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Output.png)
 
