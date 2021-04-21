@@ -43,7 +43,7 @@ make Main
 ./Main
 
 Para a versão de arranjos:
-cd Trabalho-Fila-de-Vacinacao/Fonte/Arranjo/
+cd Trabalho-Fila-de-Vacinacao/Fonte/Arranjos/
 make Main
 ./Main
 ```
