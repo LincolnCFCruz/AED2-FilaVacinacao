@@ -2,6 +2,15 @@
 
 ![Main](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Final.png)
 
+<p align="center">
+<img src="https://img.shields.io/github/repo-size/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=Tamanho&style=flat-square">
+<img src="https://img.shields.io/github/languages/count/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=Linguagens&style=flat-square">
+<img src="https://img.shields.io/github/commit-activity/y/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=Commits&style=flat-square">
+<img src="https://img.shields.io/github/issues/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=Problemas&style=flat-square">
+<img src="https://img.shields.io/github/last-commit/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=%C3%9Altimo%20commit&style=flat-square">
+</p>
+
+
 ## Links úteis
 [Painel Coronavírus](https://covid.saude.gov.br/) | [Saúde / Gov.br](https://coronavirus.saude.gov.br/) | [Vacinação Minas Gerais](https://vacinaminas.mg.gov.br/)
 
