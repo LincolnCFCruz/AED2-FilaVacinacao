@@ -35,8 +35,15 @@
 ```
 ## Como executar:
 ```
-git clone https://github.com/ORZAYAZ/Trabalho-Fila-de-Vacinacao
-cd Trabalho-Fila-de-Vacinacao/source/
+git clone https://github.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao
+
+Para a versão de ponteiros:
+cd Trabalho-Fila-de-Vacinacao/Fonte/Ponteiro/
+make Main
+./Main
+
+Para a versão de arranjos:
+cd Trabalho-Fila-de-Vacinacao/Fonte/Arranjo/
 make Main
 ./Main
 ```
