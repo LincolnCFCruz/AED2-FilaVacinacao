@@ -31,15 +31,15 @@
  - Linux → GCC
  ```
  # Sistemas baseados no Debian
- sudo apt install -y gcc git
+ sudo apt install -y gcc git cmake
  # Sistemas baseados no RHEL
- sudo dnf install -y gcc git
+ sudo dnf install -y gcc git cmake
  # Sistemas baseados no Arch Linux
- sudo pacman -S gcc git
+ sudo pacman -S gcc git cmake
  # Void Linux
- sudo xbps-install -S gcc git
+ sudo xbps-install -S gcc git cmake
  # Solus OS
- sudo eopkg install gcc git
+ sudo eopkg install gcc git cmake
 ```
 ## Como executar:
 ```
