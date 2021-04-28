@@ -47,12 +47,12 @@ git clone https://github.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao
 
 Para a versão de ponteiros:
 cd Trabalho-Fila-de-Vacinacao/Fonte/Ponteiro/
-make Main
+gcc -o Main Vacina.c Main.c
 ./Main
 
 Para a versão de arranjos:
 cd Trabalho-Fila-de-Vacinacao/Fonte/Arranjos/
-make Main
+gcc -o Main Vacina.c Main.c
 ./Main
 ```
 ## Exemplo de fila:
