@@ -1,6 +1,6 @@
 # Trabalho - Fila de Vacinação
 
-![Main](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Final.png)
+![Main](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Menu.png)
 
 <p align="center">
 <img src="https://img.shields.io/github/repo-size/LincolnCFCruz/Trabalho-Fila-de-Vacinacao?label=Tamanho&style=flat-square">
@@ -56,5 +56,5 @@ gcc -o Main Vacina.c Main.c
 ./Main
 ```
 ## Exemplo de fila:
-![Output](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Output.png)
+![Output](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Lista.png)
 
