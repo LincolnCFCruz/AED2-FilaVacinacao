@@ -41,6 +41,7 @@ void NovaFila (Fila *F);
 void CadastrarPessoa (Fila *F, Pessoa *dado);
 void ImprimePessoa(Pessoa P);
 void ImprimirLista(Fila *F);
+void Parcial(Fila *F, int Fase);
 void DefinirFase(Fila *F,Pessoa *P);
 void ForaFila();
 void ExibirMenu();
