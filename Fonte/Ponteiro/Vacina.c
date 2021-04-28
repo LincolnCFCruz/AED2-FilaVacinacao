@@ -131,9 +131,12 @@ void Parcial(Fila *F, int Fase)
 	
 	Celula *Auxiliar = F->Inicio->Proximo;
 	
-	while(Auxiliar != NULL && Auxiliar->Dado.Fase == Fase)
+	while(Auxiliar != NULL)
 	{
-		ImprimePessoa(Auxiliar->Dado);
+		if(Auxiliar->Dado.Fase == Fase)
+		{
+			ImprimePessoa(Auxiliar->Dado);
+		}
 		Auxiliar = Auxiliar->Proximo;
 	}
 
