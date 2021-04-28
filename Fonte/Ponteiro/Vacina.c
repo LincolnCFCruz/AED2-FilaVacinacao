@@ -77,9 +77,29 @@ void CadastrarPessoa (Fila *F, Pessoa *P)
 {
   Celula *Nova = NovaCelula();  
   Nova->Dado = *P;  
-  F->Fim->Proximo = Nova;
-  F->Fim = Nova;
-  F->Tamanho++;  
+  
+  if(P->Fase < 4)
+  {
+	  Celula *Anterior = F->Inicio;
+	  Celula *Auxiliar = F->Inicio->Proximo;
+	  
+	  while(Auxiliar != NULL && Auxiliar->Dado.Fase <= P->Fase)
+	  {
+		  Anterior = Anterior->Proximo;
+		  Auxiliar = Auxiliar->Proximo;  
+	  }
+	  
+	  Nova->Proximo = Auxiliar;
+      Anterior->Proximo = Nova;
+      F->Tamanho++;
+  }
+  
+  else
+  {
+	  F->Fim->Proximo = Nova;
+	  F->Fim = Nova;
+	  F->Tamanho++;
+  }
 }
 
 void ImprimePessoa(Pessoa P)
@@ -102,21 +122,42 @@ void ImprimirLista(Fila *F)
 	printf("  +------+-------+-------------------+--------------------+-------------------------------+\n");
 }
 
+
+void Parcial(Fila *F, int Fase)
+{
+	printf("  +------+-------+-------------------+--------------------+-------------------------------+\n");
+	printf("  | Fase | Idade | Profissão (Grupo) | Comorbidades (1|0) |              Nome             |\n");
+	printf("  +------+-------+-------------------+--------------------+-------------------------------+\n");
+	
+	Celula *Auxiliar = F->Inicio->Proximo;
+	
+	while(Auxiliar != NULL && Auxiliar->Dado.Fase == Fase)
+	{
+		ImprimePessoa(Auxiliar->Dado);
+		Auxiliar = Auxiliar->Proximo;
+	}
+
+	printf("  +------+-------+-------------------+--------------------+-------------------------------+\n");
+}
+
 void DefinirFase(Fila *FilaGeral, Pessoa *P)
 {
 	if(P->Idade > 75 || P->Profissao == 1)
 	{
 		P->Fase = 1;
+		CadastrarPessoa(FilaGeral, P);
 		ExibePessoa(P);
 	}
 	else if(P->Idade >= 60 && P->Idade <= 74)
 	{
 		P->Fase = 2;
+		CadastrarPessoa(FilaGeral, P);
 		ExibePessoa(P);
 	}
 	else if(P->Comorbidades == 1)
 	{
 		P->Fase = 3;
+		CadastrarPessoa(FilaGeral, P);
 		ExibePessoa(P);
 	}
 	else if(P->Idade < 18 || P->Gestante == 1 || P->Alergico == 1)
@@ -126,6 +167,7 @@ void DefinirFase(Fila *FilaGeral, Pessoa *P)
 	else
 	{
 		P->Fase = 4;
+		CadastrarPessoa(FilaGeral, P);
 		ExibePessoa(P);
 	}
 }
@@ -182,12 +224,15 @@ void ForaFila()
 
 void Links()
 {
-	printf(" +-------+\n");
-	printf(" | Links |\n");
-	printf(" +-------+---------+----------------------------------+\n");
-	printf(" |     Doenças     | https://saude.abril.com.br/      |\n");
-	printf(" | Grupos de risco | https://gauchazh.clicrbs.com.br/ |\n");
-	printf(" +-------+---------+----------------------------------+\n");
+	printf("  +-------+\n");
+	printf("  | Links |\n");
+	printf("  +-------+------------+----------------------------------+\n");
+	printf("  |      Doenças       | https://saude.abril.com.br/      |\n");
+	printf("  |  Grupos de risco   | https://gauchazh.clicrbs.com.br/ |\n");
+	printf("  | Painel Coronavírus | https://covid.saude.gov.br/      |\n");
+	printf("  |   Saúde / Gov.br   | https://coronavirus.saude.gov.br/|\n");
+	printf("  |    Vacinação MG    | https://vacinaminas.mg.gov.br/   |\n");
+	printf("  +-------+---------+-------------------------------------+\n");
 }
 
 void Erro()
