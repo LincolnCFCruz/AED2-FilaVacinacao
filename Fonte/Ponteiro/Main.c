@@ -11,6 +11,7 @@ int Escolha()
 
 void Menu(Fila *FilaGeral)
 {
+	char Aux;
 	int Opcao = 0;
 	int Voltar = 0;
 	Opcao = Escolha();
@@ -36,6 +37,7 @@ void Menu(Fila *FilaGeral)
 		
 		case 1:
 		{
+			char Genero;
 			Pessoa P;
 			
 			printf("\n");
@@ -44,27 +46,63 @@ void Menu(Fila *FilaGeral)
 			printf("  +---------------------------------------+\n");	
 			printf("\n");
 			
-			printf("Nome: ");
-			scanf("%s", P.Nome);
+			printf("Gênero: (H - Homem | M - Mulher)\n");
+			fflush(stdin);
+			scanf(" %c", &Genero);
 			
-			printf("Idade: ");
-			scanf("%d", &P.Idade);
+			if(Genero == 'H' || Genero == 'h')
+			{
+				printf("Nome: ");
+				scanf("%c",&Aux);
+				scanf("%[^\n]",P.Nome);
 			
-			printf("Insira o valor referente a sua profissão de acordo com os grupos abaixo: \n");
-			ImprimirGrupos();
-			scanf("%d", &P.Profissao);
+				printf("Idade: ");
+				scanf("%d", &P.Idade);
 			
-			printf("Apresenta alguma das comorbidades abaixo? (1 - SIM | 0 - NÃO)\n");
-			ImprimirComorbidades();
-			scanf("%d", &P.Comorbidades);
+				printf("Insira o valor referente a sua profissão de acordo com os grupos abaixo: \n");
+				ImprimirGrupos();
+				scanf("%d", &P.Profissao);
 			
-			printf("Você é gestante? (1 - SIM | 0 - NÃO)\n");
-			scanf("%d", &P.Gestante);
+				printf("Apresenta alguma das comorbidades abaixo? (1 - SIM | 0 - NÃO)\n");
+				ImprimirComorbidades();
+				scanf("%d", &P.Comorbidades);
+				
+				printf("Apresenta alergia a vacina ou a algum dos componentes da mesma? (1 - SIM | 0 - NÃO)\n");
+				scanf("%d", &P.Alergico);
+				
+				DefinirFase(FilaGeral,&P);
+			}
 			
-			printf("Apresenta alergia a vacina ou a algum dos componentes da mesma? (1 - SIM | 0 - NÃO)\n");
-			scanf("%d", &P.Alergico);
+			else if(Genero == 'M' || Genero == 'm')
+			{
+				printf("Nome: ");
+				scanf("%c",&Aux);
+				scanf("%[^\n]",P.Nome);
 			
-			DefinirFase(FilaGeral,&P);
+				printf("Idade: ");
+				scanf("%d", &P.Idade);
+			
+				printf("Insira o valor referente a sua profissão de acordo com os grupos abaixo: \n");
+				ImprimirGrupos();
+				scanf("%d", &P.Profissao);
+			
+				printf("Apresenta alguma das comorbidades abaixo? (1 - SIM | 0 - NÃO)\n");
+				ImprimirComorbidades();
+				scanf("%d", &P.Comorbidades);
+			
+				printf("Você é gestante? (1 - SIM | 0 - NÃO)\n");
+				scanf("%d", &P.Gestante);
+			
+				printf("Apresenta alergia a vacina ou a algum dos componentes da mesma? (1 - SIM | 0 - NÃO)\n");
+				scanf("%d", &P.Alergico);
+				
+				DefinirFase(FilaGeral,&P);
+			}
+			
+			else
+			{
+				Erro();
+			}
 			
 			Reiniciar();
 			scanf("%d", &Voltar);
@@ -126,7 +164,7 @@ void Menu(Fila *FilaGeral)
 				printf("  |    Exibir a primeira fase    |\n");
 				printf("  +------------------------------+\n");	
 				printf("\n");
-				ImprimirLista(FilaGeral);
+				Parcial(FilaGeral, fase);
 			
 			}
 				
@@ -138,7 +176,7 @@ void Menu(Fila *FilaGeral)
 				printf("  |     Exibir a segunda fase   |\n");
 				printf("  +-----------------------------+\n");	
 				printf("\n");
-				ImprimirLista(FilaGeral);
+				Parcial(FilaGeral, fase);
 			}
 		
 			else if (fase == 3) 
@@ -149,7 +187,7 @@ void Menu(Fila *FilaGeral)
 				printf("  |    Exibir a terceira fase    |\n");
 				printf("  +------------------------------+\n");	
 				printf("\n");
-				ImprimirLista(FilaGeral);
+				Parcial(FilaGeral, fase);
 			}	
 		
 			else if (fase == 4) 
@@ -160,7 +198,7 @@ void Menu(Fila *FilaGeral)
 				printf("  |    Exibir a quarta fase    |\n");
 				printf("  +----------------------------+\n");	
 				printf("\n");
-				ImprimirLista(FilaGeral);
+				Parcial(FilaGeral, fase);
 			}
 			
 			else
@@ -189,6 +227,7 @@ void Menu(Fila *FilaGeral)
 		case 4:
 		{
 			Links();
+			Reiniciar();
 			scanf("%d", &Voltar);
 			if(Voltar == 1)
 			{
