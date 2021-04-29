@@ -67,14 +67,11 @@ void NovaFila (Fila *F)
 
 void CadastrarPessoa (Fila *F, Pessoa P) 
 {
-  if(F->Tamanho == MAX){
-    printf("Fila cheia!\n");
-  }
-  else if(F->Tamanho == 0){
-    F->fila[0] = P;
-    F->Tamanho++;
-    F->Fim++;
-    printf("\nPessoa cadastrada!\n");
+ if(F->Tamanho == 0){
+   F->fila[0] = P;
+   F->Tamanho++;
+   F->Fim++;
+   printf("\nPessoa cadastrada!\n");
   }
   else{
     int posicao = F->Tamanho-1;

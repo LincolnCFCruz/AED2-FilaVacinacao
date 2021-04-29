@@ -39,7 +39,11 @@ void Menu(Fila *FilaGeral)
 		{
 			char Genero;
 			Pessoa P;
-      if(FilaGeral->Tamanho == MAX){
+      if(FilaGeral->Tamanho == MAX)
+      {
+        printf("  +------------------+\n");
+        printf("  | Erro, fila Cheia | \n");
+        printf("  +------------------+\n");
         Erro();
         Reiniciar();
 			  scanf("%d", &Voltar);
