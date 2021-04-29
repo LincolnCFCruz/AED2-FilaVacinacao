@@ -39,6 +39,21 @@ void Menu(Fila *FilaGeral)
 		{
 			char Genero;
 			Pessoa P;
+      if(FilaGeral->Tamanho == MAX){
+        Erro();
+        Reiniciar();
+			  scanf("%d", &Voltar);
+			  if(Voltar == 1)
+			  {
+				  Menu(FilaGeral);		
+			  }
+			  else
+			  {
+				  Fim();
+				  exit(0);
+			  }
+			  break;
+      }
 			
 			printf("\n");
 			printf("  +---------------------------------------+\n");
