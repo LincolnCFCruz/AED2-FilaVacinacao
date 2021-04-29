@@ -71,9 +71,13 @@ void CadastrarPessoa (Fila *F, Pessoa P)
    F->fila[0] = P;
    F->Tamanho++;
    F->Fim++;
-   printf("\nPessoa cadastrada!\n");
+   printf("  +-------------------+\n");
+   printf("  | Pessoa cadastrada |\n");
+   printf("  +-------------------+\n");
   }
-  else{
+  
+  else
+  {
     int posicao = F->Tamanho-1;
     while(posicao >= 0 && F->fila[posicao].Fase > P.Fase){
       F->fila[posicao+1] = F->fila[posicao];
@@ -83,7 +87,9 @@ void CadastrarPessoa (Fila *F, Pessoa P)
     F->fila[posicao] = P;
     F->Tamanho++;
     F->Fim++;
-    printf("\nPessoa cadastrada!\n");
+    printf("  +-------------------+\n");
+    printf("  | Pessoa cadastrada |\n");
+    printf("  +-------------------+\n");
   }  
 }
 

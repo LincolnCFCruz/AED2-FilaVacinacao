@@ -44,7 +44,6 @@ void Menu(Fila *FilaGeral)
         printf("  +------------------+\n");
         printf("  | Erro, fila Cheia | \n");
         printf("  +------------------+\n");
-        Erro();
         Reiniciar();
 			  scanf("%d", &Voltar);
 			  if(Voltar == 1)
