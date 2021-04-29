@@ -55,6 +55,18 @@ cd Trabalho-Fila-de-Vacinacao/Fonte/Arranjos/
 gcc -o Main Vacina.c Main.c
 ./Main
 ```
+## Contribuições
+```
++---------------------------------+---------------------------------------+
+| Pedro Igor Martins dos Reis     | Desenvolveram a versão em Ponteiros   |
++---------------------------------+ de ponteiros do projeto e a aparência |
+| Rafaela Mesquita Gontijo        | do programa.                          |
++---------------------------------+---------------------------------------+
+| Lincoln Corrêa Figueiredo Cruz  | Desenvolveram a versão em Arranjos    |
++---------------------------------+ do projeto e auxiliaram na parte      |
+| Rafael Brandão Nunes            | de prioridade da fila                 |
++---------------------------------+---------------------------------------+
+```
 ## Exemplo de fila:
 ![Output](https://raw.githubusercontent.com/LincolnCFCruz/Trabalho-Fila-de-Vacinacao/main/Imagens/Lista.png)
 
